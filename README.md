@@ -1,3 +1,6 @@
+About this Repository
+-------------------
+This repository is based from the NIFTIlib project. It contains changes to allow for building a static/shared library in Windows using Microsoft Visual Studio.
 
 Nifti-1 C libraries
 -------------------
@@ -75,5 +78,6 @@ For more information
 --------------------
 
 See the niftilib webpage at http://niftilib.sourceforge.net/
+
 See the NIFTI webpage at http://nifti.nimh.nih.gov/
 
