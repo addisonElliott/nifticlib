@@ -107,7 +107,7 @@ Using the Library in Projects
 ---------------------
 Using NIFTIclib in projects is like using any other static/shared library in a project. You include the header files in your project and use them as needed. Next, you link to the library file (.lib, .so, .a, etc). Finally, if a shared library was built, the DLLs are what will contain the actual information. DLLs are searched for at runtime. The necessary DLLs will need to be in your PATH variable or in the directory of the executable.
 
-**Note: ** If you are using static libraries in your project, make sure to define `NIFTILIB_STATIC` before including ANY header file. It is usually best to define NIFTILIB_STATIC in the project settings so that it will be done automatically.
+**Note:** If you are using static libraries in your project, make sure to define `NIFTILIB_STATIC` before including ANY header file. It is usually best to define NIFTILIB_STATIC in the project settings so that it will be done automatically.
 
 For more information
 --------------------
