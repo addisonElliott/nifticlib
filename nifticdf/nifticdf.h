@@ -56,7 +56,20 @@
      NIFTI_INTENT_LOG10PVAL  = -log10(p)
 *****************************************************************************/
 
-extern char *inam[];
+#if (defined(WIN32) || defined(_WIN32) || defined(__WIN32__)) && !defined(NIFTILIB_STATIC)
+#if defined(_MSC_VER)
+#pragma warning(disable: 4251)
+#endif // defined(_MSC_VER)
+#if defined(NIFTILIB_DLL_EXPORT)
+	#define  NIFTILIB_EXPORT __declspec(dllexport)
+#else // defined(NIFTILIB_EXPORT)
+	#define  NIFTILIB_EXPORT __declspec(dllimport)
+#endif // defined(NIFTILIB_EXPORT)
+#else // (defined(WIN32) || defined(_WIN32) || defined(__WIN32__)) && !defined(NIFTILIB_STATIC)
+  #define NIFTILIB_EXPORT
+#endif // (defined(WIN32) || defined(_WIN32) || defined(__WIN32__)) && !defined(NIFTILIB_STATIC)
+
+extern NIFTILIB_EXPORT char *inam[];
 
 int nifti_intent_code( char *name );
 double nifti_stat2cdf( double val, int code, double p1,double p2,double p3 );
